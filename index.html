@@ -22,7 +22,7 @@
         }
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .header h1 {
             font-size: 28px;
@@ -33,7 +33,49 @@
             color: #64748b;
             font-size: 15px;
         }
-        /* ⭐ 링크 카드 스타일 */
+        
+        /* 💎 새로 추가된 메인 배너 스타일 */
+        .main-banner {
+            background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .main-banner h2 {
+            margin: 0 0 10px 0;
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+        .main-banner p {
+            margin: 0 0 25px 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        /* 배너 안의 클릭 유도 황금색 버튼 */
+        .banner-btn {
+            background-color: #fbbf24;
+            color: #0f172a;
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 18px;
+            font-weight: 800;
+            border-radius: 30px;
+            display: inline-block;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .banner-btn:hover {
+            background-color: #f59e0b;
+            transform: scale(1.05);
+        }
+
+        /* ⭐ 일반 링크 카드 스타일 */
         .card-list {
             display: flex;
             flex-direction: column;
@@ -76,19 +118,35 @@
             font-size: 13px;
             color: #64748b;
         }
-        /* 🎯 클릭 유도 액션 버튼 */
         .btn-link {
-            background-color: #2563eb;
-            color: #fff;
+            background-color: #f1f5f9;
+            color: #0f172a;
             text-decoration: none;
             padding: 12px 24px;
             font-size: 14px;
             font-weight: bold;
             border-radius: 8px;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, color 0.2s;
         }
         .btn-link:hover {
-            background-color: #1d4ed8;
+            background-color: #3b82f6;
+            color: #fff;
+        }
+        
+        /* 모바일 최적화 */
+        @media (max-width: 600px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .info-area {
+                flex-direction: column;
+            }
+            .btn-link {
+                width: 100%;
+                box-sizing: border-box;
+            }
         }
     </style>
 </head>
@@ -100,7 +158,15 @@
         <p>검증된 공식 파트너사의 안전한 다이렉트 연결 및 단독 혜택망입니다.</p>
     </div>
 
+    <!-- 💎 메인 배너 영역 (수익률이 가장 높은 핵심 파트너 링크 배치) -->
+    <div class="main-banner">
+        <h2>🎉 단독 제휴 파트너 VVIP 프로모션 🎉</h2>
+        <p>지금 가입하시는 모든 분들께 특별한 혜택을 100% 무료로 쏩니다!</p>
+        <a href="https://가장단가높은메인제휴링크.com" target="_blank" class="banner-btn">메인 혜택 당장 받으러 가기 👉</a>
+    </div>
+
     <div class="card-list">
+        <!-- 💡 매물 카드 01 -->
         <div class="card">
             <div class="info-area">
                 <div class="badge">HOT</div>
@@ -109,9 +175,11 @@
                     <p>신규 가입 시 초고속 무제한 패스 및 10,000 포인트 즉시 지급</p>
                 </div>
             </div>
-            <a href="https://제휴사이트주소.com/partner_code=ch_jeon1" target="_blank" class="btn-link">바로가기</a>
+            <!-- 🔗 아래 href="..." 안에 파트너 링크 교체 -->
+            <a href="https://제휴사이트주소1.com" target="_blank" class="btn-link">바로가기</a>
         </div>
 
+        <!-- 💡 매물 카드 02 -->
         <div class="card">
             <div class="info-area">
                 <div class="badge" style="background-color: #3b82f6;">추천</div>
@@ -120,9 +188,10 @@
                     <p>모바일 APP 다운로드 시 한 달 무료 감상 특별 프로모션 적용</p>
                 </div>
             </div>
-            <a href="https://제휴사이트주소.com/partner_code=ch_jeon2" target="_blank" class="btn-link">바로가기</a>
+            <a href="https://제휴사이트주소2.com" target="_blank" class="btn-link">바로가기</a>
         </div>
 
+        <!-- 💡 매물 카드 03 -->
         <div class="card">
             <div class="info-area">
                 <div class="badge" style="background-color: #10b981;">EVENT</div>
@@ -131,7 +200,7 @@
                     <p>매일 출석 체크 시 무료 다운로드 쿠폰 매일 3장 기본 제공</p>
                 </div>
             </div>
-            <a href="https://제휴사이트주소.com/partner_code=ch_jeon3" target="_blank" class="btn-link">바로가기</a>
+            <a href="https://제휴사이트주소3.com" target="_blank" class="btn-link">바로가기</a>
         </div>
     </div>
 </div>
